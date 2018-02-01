@@ -1066,6 +1066,9 @@ static int __init core_ctl_init(void)
 	unsigned int cpu;
 	struct cpumask cpus = *cpu_possible_mask;
 
+	if (should_skip(cpu_possible_mask))
+		return 0;
+
 	cpuhp_setup_state_nocalls(CPUHP_AP_ONLINE_DYN,
 			"core_ctl/isolation:online",
 			core_ctl_isolation_online_cpu, NULL);
