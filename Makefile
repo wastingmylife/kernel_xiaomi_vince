@@ -2,7 +2,7 @@ NAME ?= WindStorm-Kernel
 DATE := $(shell date "+%d%m%Y-%I%M")
 VERSION := 4.9-$(LINUX_VERSION)
 
-SZIP := $(NAME)-$(VERSION)-BETA-$(DATE).zip
+SZIP := $(NAME)-$(VERSION)-STABLE-$(DATE).zip
 
 
 EXCLUDE := Makefile *.git* *.jar* WindStorm* *placeholder*
