@@ -1,10 +1,11 @@
-NAME ?= Queensley
-CODEPACK := Raven
+NAME ?= WindStorm-Kernel
 DATE := $(shell date "+%d%m%Y-%I%M")
+VERSION := 4.9-$(LINUX_VERSION)
 
-SZIP := $(NAME)-$(CODEPACK)-$(DATE).zip
+SZIP := $(NAME)-$(VERSION)-STABLE-$(DATE).zip
 
-EXCLUDE := Makefile *.git* *.jar* Queensley* *placeholder*
+
+EXCLUDE := Makefile *.git* *.jar* WindStorm* *placeholder*
 
 stable: $(SZIP)
 
