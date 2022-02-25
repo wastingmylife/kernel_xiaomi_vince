@@ -3222,7 +3222,8 @@ power_cycle:
 		pr_debug("%s: Signal voltage switch failed, "
 			"power cycling card\n", mmc_hostname(host));
 		mmc_power_cycle(host, ocr);
-	}
+		}
+	return 0;
 }
 
 /*
