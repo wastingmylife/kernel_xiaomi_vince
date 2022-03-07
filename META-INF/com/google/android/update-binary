@@ -463,10 +463,10 @@ if [ -f banner ]; then
   ui_print " " " ";
 fi;
 
-ui_print "||..====================================..||"
+ui_print "||..====================================..||";
 ui_print "||............WINDSTORM KERNEL............||";
 ui_print "||Made by : @wastingmylife................||";
-ui_print "||Kernel Version : 4.9......||";
+ui_print "||Kernel Version : 4.9y...................||";
 ui_print "||Special Thanks : .......................||";
 ui_print "||KudProject..............................||";
 ui_print "||AnyKernel3 by osm0sis @ xda-developers..||";
@@ -481,6 +481,8 @@ ui_print "︱︱︱.|____|";
 ui_print "︱︱︱.| .|| .|";
 ui_print "︱︱︱.|_||_|";
 ui_print "︱︱︱(__)(__)";
+ui_print "||..====================================..||";
+
 if [ -f version ]; then
   ui_print " ";
   ui_printfile version;
