@@ -128,4 +128,5 @@ Android.bp
 by.sh
 
 #Ignoring Anykernel3 
-Anykernel3
+AnyKernel3/zI*
+AnyKernel3/Winds*
