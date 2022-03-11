@@ -124,4 +124,8 @@ kernel/configs/android-*.cfg
 #
 Android.bp
 
+#Ignoring Build script
 by.sh
+
+#Ignoring Anykernel3 
+Anykernel3
