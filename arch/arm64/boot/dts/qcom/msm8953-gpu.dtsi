@@ -70,8 +70,8 @@
 
 		qcom,initial-pwrlevel = <7>;
 
-		qcom,idle-timeout = <64>; //msecs
-		qcom,deep-nap-timeout = <64>; //msecs
+		qcom,idle-timeout = <58>; //msecs
+		qcom,deep-nap-timeout = <58>; //msecs
 		qcom,strtstp-sleepwake;
 
 		qcom,highest-bank-bit = <14>;
