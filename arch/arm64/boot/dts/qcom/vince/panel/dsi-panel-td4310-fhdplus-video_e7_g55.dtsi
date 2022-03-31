@@ -15,7 +15,7 @@
 	dsi_td4310_fhdplus_e7_g55_vid: qcom,mdss_dsi_td4310_fhdplus_video_e7_g55 {
 		qcom,mdss-dsi-panel-name = "td4310 fhdplus e7 g55 video mode dsi panel";
 		qcom,mdss-dsi-panel-type = "dsi_video_mode";
-		qcom,mdss-dsi-panel-framerate = <60>;
+		qcom,mdss-dsi-panel-framerate = <62>;
 		qcom,mdss-dsi-virtual-channel-id = <0>;
 		qcom,mdss-dsi-stream = <0>;
 		qcom,mdss-dsi-panel-width = <1080>;
