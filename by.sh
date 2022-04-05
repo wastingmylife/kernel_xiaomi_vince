@@ -15,20 +15,6 @@ export KBUILD_BUILD_HOST="noidea"
 
 # FUNCTIONS
 
-# Ask Telegram Channel/Chat ID -- thanks to @Ghostmaster69-dev
-if [[ -z ${CHANNEL_ID} ]]; then
-    echo -n "Sup dude! Please give me your telegram channel ID: "
-    read -r tg_channel_id
-    CHANNEL_ID="${tg_channel_id}"
-fi
-
-# Ask Telegram Bot API Token -- thanks to @Ghostmaster69-dev
-if [[ -z ${TELEGRAM_TOKEN} ]]; then
-    echo -n "Please give me your telegram bot token: "
-    read -r tg_token
-    TELEGRAM_TOKEN="${tg_token}"
-fi
-
 # Upload buildlog to group
 tg_erlog()
 {
@@ -43,15 +29,7 @@ tg_pushzip()
 {
 	FZIP=$ZIP_DIR/$ZIP
 	curl -F document=@"$FZIP"  "https://api.telegram.org/bot$TELEGRAM_TOKEN/sendDocument" \
-			-F chat_id=$CHANNEL_ID \
-			-F caption="Build Finished after $(($DIFF / 60)) minute(s) and $(($DIFF % 60)) seconds"
-}
-
-# Upload download link to channel
-tg_pushlink()
-{
-        export zip_directory="$(cd $(pwd)/AnyKernel3/ && ls *.zip)"
-        curl -s https://api.telegram.org/bot$TELEGRAM_TOKEN/sendMessage -d chat_id=$CHANNEL_ID 
+			-F chat_id=$CHANNEL_ID 
 }
 
 # Send Updates
@@ -192,7 +170,6 @@ else
 fi
 
 cd $ZIP_DIR
-dir
 rm -rf zIm*
 rm -rf Winds*
 cd ../
