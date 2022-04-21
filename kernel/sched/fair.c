@@ -7279,18 +7279,6 @@ retry:
 			new_util = max(min_util, new_util);
 
 			/*
-			 * Include minimum capacity constraint:
-			 * new_util contains the required utilization including
-			 * boost. min_capped_util also takes into account a
-			 * minimum capacity cap imposed on the CPU by external
-			 * actors.
-			 */
-			min_capped_util = max(new_util, capacity_min_of(i));
-
-			if (cpu_check_overutil_condition(i, new_util))
-				continue;
-
-			/*
 			 * Case A) Latency sensitive tasks
 			 *
 			 * Unconditionally favoring tasks that prefer idle CPU to
